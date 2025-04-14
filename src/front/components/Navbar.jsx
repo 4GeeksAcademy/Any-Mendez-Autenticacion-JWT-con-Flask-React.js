@@ -22,30 +22,30 @@ export const Navbar = () => {
 		<nav className="navbar navbar-light bg-light">
 			<div className="container">
 				<Link to="/">
-					<span className="navbar-brand mb-0 h1">Autenticación JWT</span>
+					<span className="navbar-brand mb-0 h1 text-info">Any Méndez</span>
 				</Link>
 				<div className="dropdown ml-auto">
 
-					<button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+					<button className="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 						Menu
 					</button>
 					<ul className="dropdown-menu">
 						{!token && (
 							<>
 							<Link to="/signup">
-							<li><a className="dropdown-item">Register</a></li>
+							<li><a className="dropdown-item text-info">Signup</a></li>
 							</Link>
 							<Link to="/login">
-							<li><a className="dropdown-item" href="/login">Login</a></li>
+							<li><a className="dropdown-item text-info" href="/login">Login</a></li>
 							</Link>
 							</>
 						)}
 						<Link to="/"><li>
-							<a className="dropdown-item" href="/">Back Home</a></li>
+							<a className="dropdown-item text-info" href="/">Back Home</a></li>
 							</Link>
 						{token && ( 
 							<li>
-								<button className="dropdown-item" onClick={handleLogout}>
+								<button className="dropdown-item text-info" onClick={handleLogout}>
 									Logout
 								</button>
 							</li>

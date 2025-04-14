@@ -43,26 +43,22 @@ const Private = () => {
     return <div>Cargando...</div>;
   }
   return (
-    <div>
-      <h1>Informacion del Usuario</h1>
-
-      <form className="row g-3 needs-validation" noValidate>
-
-        <div className="col-md-4">
-          <label htmlFor="validationCustom02" className="form-label">Id de usuario</label>
-          <label className="form-control">{infoMe.user.id}</label>
-        </div>
-        <div className="col-md-4">
-          <label htmlFor="validationCustomUsername" className="form-label">Username</label>
-          <div className="input-group has-validation">
-            <label className="form-control">{infoMe.user.email}</label>
+    <div className='container-fluid d-flex justify-content-center align-items-center'>
+      <div className='container text-warning'>
+        <h1 className='text-center text-warning mt-5 mb-5'>Información del Usuario</h1>
+        <form className="row g-3 needs-validation" noValidate>
+          <div className="col-12 mt-5 text-center">
+            <label htmlFor="validationCustom02" className="form-label">Id de usuario</label>
+            <label className="form-control">{infoMe.user.id}</label>
           </div>
-        </div>
-      </form>
-
-
-
-
+          <div className="col-12 mt-5 text-center">
+            <label htmlFor="validationCustomUsername" className="form-label">Username</label>
+            <div className="input-group has-validation">
+              <label className="form-control">{infoMe.user.email}</label>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

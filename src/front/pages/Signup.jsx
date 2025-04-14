@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
-  
+
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -26,7 +26,7 @@ const Signup = () => {
       if (response.ok) {
         navigate('/login');
       }
-      else{
+      else {
         throw new Error("Ocurrio un error al llamar al endpoint /register");
 
       };
@@ -40,24 +40,26 @@ const Signup = () => {
   }, [])
 
   return (
-    <div className="text-center mt-5">
-      <h1>REGISTRO</h1>
+    <div className="container-fluid">
+      <div className="container text-center mt-5 mb-5">
+      <h1 className="text-danger">SIGNUP</h1>
       <form>
-        <div className="mb-3">
+        <div className="mt-5 text-warning">
           <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
           <input type="email" onChange={(e) => {
             setEmail(e.target.value)
-          }} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+          }} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="email@example.com" />
           <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
         </div>
-        <div className="mb-3">
+        <div className="mt-5 mb-5 text-warning">
           <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
           <input type="password" onChange={(e) => {
             setPassword(e.target.value)
-          }} className="form-control" id="exampleInputPassword1" />
+          }} className="form-control" id="exampleInputPassword1" placeholder="Password" />
         </div>
-        <button type="button" onClick={handleRegister} className="btn btn-primary">Register</button>
+        <button type="button" onClick={handleRegister} className="btn btn-primary">Signup</button>
       </form>
+      </div>
     </div>
 
   );
